@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head><title>Factory Method</title></head>
+<body>
+<h1>Shoe Inventory System</h1>
+<p id="demo"></p>
+<script>
+    function createShoe(category,brand,size){
+        return{
+            category,
+            brand,
+            size,
+            print:function(){
+                return `<hr>category: ${category} <br>
+                brand: ${brand} <br> 
+                size: ${size} <hr>`
+            },
+        };
+    }
+    function call(){
+        const n = prompt("Enter number of enteries to be added");
+        for(let i=0;i<n;i++){
+            var inv = document.createElement('p');
+            var category = prompt("Enter shoe category");
+            var brand = prompt("Enter shoe brand");
+            var size = prompt("Enter shoe size");
+            var print = createShoe(category,brand,size);
+            inv.innerHTML = print.print();
+            document.getElementById("demo").appendChild(inv);
+        }
+    }
+    call()
+</script>
+</body>

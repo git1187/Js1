@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head><title>Class method</title></head>
+<body>
+    <h1>Shoe Inventory System</h1>
+    <button onclick="shoe()">Get Shoe Details</button>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+<script>
+function shoe(){
+    class Shoe{
+        constructor(category,brand,size,colour){
+            this.category = category;
+            this.brand = brand;
+            this.size = size;
+            this.colour = colour;
+        }
+    }
+    var s1 = new Shoe("Women","Puma",7,"Black");
+    var s2 = new Shoe("Men","Adidas",10,"Grey");
+    var s3 = new Shoe("Women","Sketchers",6,"Red");
+
+    document.getElementById("demo1").innerHTML = "<hr>category: " + s1.category + "<br>brand: " + s1.brand + "<br>size: " + s1.size + "<br>colour: " + s1.colour + "<hr>";
+    document.getElementById("demo2").innerHTML = "<hr>category: " + s2.category + "<br>brand: " + s2.brand + "<br>size: " + s2.size + "<br>colour: " + s2.colour + "<hr>";
+    document.getElementById("demo3").innerHTML = "<hr>category: " + s3.category + "<br>brand: " + s3.brand + "<br>size: " + s3.size + "<br>colour: " + s3.colour + "<hr>";
+}
+</script>
+</body>
